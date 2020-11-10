@@ -32,8 +32,11 @@ function setup() {
   bg = createSprite(600,200,20,50);
   bg.addImage(bg_img);
   //bg.scale = 0.9;
-  bg.velocityX =-2;
   bg.x = bg.width /2;
+
+   //inv player
+   playeri = createSprite(50,215);
+   playeri.visible = false;
 
   //PLAYER OBJ
   player = createSprite(50,350,20,50);
@@ -113,6 +116,9 @@ function draw() {
         bg.x = bg.width /2;
     }
   
+          //camera.position.x = player.x;
+          camera.position.y = playeri.y;
+		  
   drawSprites();
   spawnObstacles();
 }
